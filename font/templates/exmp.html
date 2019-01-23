@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="{% static 'js/common.js' %}"></script>
+    <script src="{% static 'js/jquery-1.11.3.js' %}"></script>
+</head>
+<body>
+<table width="400px" border="1px">
+    <tr align="center">
+        <td>卡片编号</td>
+        <td>固定资产编号</td>
+        <td>固定资产名称</td>
+        <td>类别名称</td>
+        <td>资产来源</td>
+        <td>使用人</td>
+        <td>存放地点</td>
+        <td>原值</td>
+        <td>折旧方法</td>
+        <td>累计折旧</td>
+        <td>账面价值</td>
+        <td>备注</td>
+        <td>操作</td>
+    </tr>
+        {% for fix in l %}
+            <tr align="center">
+            <td>{{ fix.cartID }}</td>
+            <td>{{ fix.fixID}}</td>
+            <td>{{ fix.fixname}}</td>
+            <td>{{ fix.cotename}}</td>
+            <td>{{ fix.fixadd}}</td>
+            <td>{{ fix.user}}</td>
+            <td>{{ fix.place}}</td>
+            <td>{{ fix.value}}</td>
+            <td>{{ fix.demeth}}</td>
+            <td>{{ fix.addZ}}</td>
+            <td>{{ fix.ZhM}}</td>
+            <td>{{ fix.BZ}}</td>
+            <td>
+                <a href="">删除</a>
+                <a href="">修改</a>
+            </td>
+            </tr>
+        {% endfor %}
+</table>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table width="400px" border="1px">
+    <tr align="center">
+    <td>固定资产卡片编号</td>
+    <td>固定资产名称</td>
+    </tr>
+    {% for fix in l %}
+    <tr align="center">
+        <td>{{fix.fixID}}</td>
+        <td><a href="/font/check?cartID={{fix.cartID}}">{{ fix.fixname }}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
